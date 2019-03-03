@@ -13,7 +13,7 @@ const ALL_BOOKS = gql`
 `
 
 const Books = () => {
-  const booksInfo = useQuery(ALL_BOOKS)
+  const booksInfo = useQuery(ALL_BOOKS, { pollInterval: 2000})
 
   if(booksInfo.loading){
     return <div>loading...</div>
